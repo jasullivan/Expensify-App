@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-    entry: './src/playground/redux-expensify.js',
+    entry: './src/app.js',
     output: {
         path: path.join(__dirname, 'public'),
         filename: 'bundle.js'
@@ -12,7 +12,8 @@ module.exports = {
             loader: 'babel-loader',
             exclude: /node_modules/
         }, {
-            test: /\.s[ac]ss$/i,
+            // test: /\.s[ac]ss$/i,
+            test: /\.s?css$/,
             use: [
             // Creates `style` nodes from JS strings
             'style-loader',
