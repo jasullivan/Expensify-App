@@ -6,8 +6,10 @@ import { addExpense } from "../actions/expenses";
 const AddExpensePage = (props) => (
     <div>
         <h1>Add expense</h1>
+        {/* // expense is a parameter so can be named anything */}
         <ExpenseForm 
             onSubmit={(expense) => {
+                console.log(expense)
                 props.dispatch(addExpense(expense));
                 props.history.push('/')
             }}

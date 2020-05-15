@@ -9,14 +9,27 @@ console.log(now.format('MMMM Do YYYY'));
 
 
 export default class ExpenseForm extends React.Component {
-    state = {
-        description: '',
-        note: '',
-        amount: '',
-        createdAt: moment(),
-        calendarFocused: false,
-        error: ''
+    constructor(props){
+        super(props);
+        this.state = {
+            description: props.expense ? props.expense.description : '',
+            note:  props.expense ? props.expense.note : '',
+            amount:  props.expense ? (props.expense.amount / 100).toString() : '',
+            createdAt:  props.expense ? moment(props.expense.createdAt) : moment(),
+            calendarFocused: false,
+            error: ''
+        }
     }
+    // could do it without constructor
+    // state = {
+    //     description: this.props.expense ? this.props.expense.description : '',
+    //     note:  this.props.expense ? this.props.expense.note : '',
+    //     amount:  this.props.expense ? (this.props.expense.amount / 100).toString() : '',
+    //     createdAt:  this.props.expense ? moment(props.expense.createdAt) : moment(),
+    //     calendarFocused: false,
+    //     error: ''
+    // }
+    // these functions can all be called handlers which are called in props
     onDescriptionChange = (e) => {
         const description = e.target.value;
         this.setState(() => ({ description }))
