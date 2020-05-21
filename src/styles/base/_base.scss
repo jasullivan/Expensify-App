@@ -5,6 +5,11 @@ body {
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     font-size: $m-size;
 }
+
+// needed so arrow shows in dateRangePicker of react-dates
+*, *:before, *:after {
+    box-sizing: border-box;
+  }
 button {
     cursor: pointer;
 }

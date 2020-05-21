@@ -20,7 +20,9 @@ export default class ExpenseForm extends React.Component {
             error: ''
         }
     }
+    // **********************************
     // could do it without constructor
+    // **********************************
     // state = {
     //     description: this.props.expense ? this.props.expense.description : '',
     //     note:  this.props.expense ? this.props.expense.note : '',
