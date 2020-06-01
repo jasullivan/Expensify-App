@@ -9,7 +9,7 @@ const AddExpensePage = (props) => (
         {/* // expense is a parameter so can be named anything */}
         <ExpenseForm 
             onSubmit={(expense) => {
-                console.log(expense)
+                console.log(expense, ' the expense from addExpensePage')
                 props.dispatch(addExpense(expense));
                 props.history.push('/')
             }}
