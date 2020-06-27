@@ -1,11 +1,11 @@
-import moment from 'moment';
+// import moment from 'moment';
 import expensesReducer from '../../reducers/expenses';
-
 // imports dummy data from fixtures
 import expenses from '../fixtures/expenses';
 
 // default sets an empty array
 test('should set default state', () => {
+    // @@INIT is the initial action object dispatched by redux store
     const state = expensesReducer( undefined, { type: '@@INIT' });
     expect(state).toEqual([])
 })

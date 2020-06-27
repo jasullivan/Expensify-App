@@ -20,6 +20,8 @@ const store = configureStore();
 
 const state = store.getState();
 const visibleExpenses = getVisibleExpenses(state.expenses, state.filters);
+
+console.log(state, ' state from app.js')
 console.log(visibleExpenses, ' visibleExpenses from app.js')
 
 const jsx = (
