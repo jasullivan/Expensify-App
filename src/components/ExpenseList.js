@@ -9,14 +9,12 @@ const ExpenseList = (props) => (
         {props.expenses.map((expense) => (<ExpenseListItem key={expense.id} {...expense} /> ))}
     </div>
 )
-
 // const mapStateToProps = (state) => {
 //     return {
 //         filters: state.filters,
 //         expenses: state.expenses
 //     }
 // }
-
 const mapStateToProps = (state) => {
     return {
         expenses: selectExpenses(state.expenses, state.filters)
