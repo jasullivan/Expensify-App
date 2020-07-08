@@ -2,7 +2,6 @@ import React from 'react'
 import moment from 'moment';
 import { SingleDatePicker } from 'react-dates';
 import 'react-dates/initialize';
-import 'react-dates/lib/css/_datepicker.css';
 
 const now = moment();
 // console.log(now.format('MMMM Do YYYY'));
@@ -70,7 +69,7 @@ export default class ExpenseForm extends React.Component {
                 createdAt: this.state.createdAt.valueOf(),
                 note: this.state.note
             })
-            console.log(this.state, ' the state from expenseForm');
+            // console.log(this.state, ' the state from expenseForm');
         }
     }
     render(){
