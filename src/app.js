@@ -20,11 +20,11 @@ const store = configureStore();
 // store.dispatch(addExpense({ description: 'Gas bill', createdAt: 1000 }))
 // store.dispatch(addExpense({ description: 'Rent', amount: 109500 }))
 
-const state = store.getState();
-const visibleExpenses = getVisibleExpenses(state.expenses, state.filters);
+// const state = store.getState();
+// const visibleExpenses = getVisibleExpenses(state.expenses, state.filters);
 
-console.log(state, ' state from app.js')
-console.log(visibleExpenses, ' visibleExpenses from app.js')
+// console.log(state, ' state from app.js')
+// console.log(visibleExpenses, ' visibleExpenses from app.js')
 
 const jsx = (
     <Provider store={store}>
